@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Madinacca Builders - Affordable housing and high-quality construction. Residential and commercial development experts.">
+  <meta name="keywords" content="Affordable Housing, Townhomes, Construction, Ajax, Madinacca Builders">
+  <meta name="author" content="Madinacca Builders">
+  <title>Madinacca Builders</title>
+  <!--<link rel="icon" href="favicon.ico" type="image/x-icon">-->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="images/logo.png" alt="Madinacca Builders Logo" class="logo">
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#brochure" class="nav-link">Brochure</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="home" class="section hero">
+    <div class="container">
+      <h1>Welcome to Madinacca Builders</h1>
+      <p>Leading the way in affordable housing and innovative construction.</p>
+    </div>
+  </section>
+  
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>At Madinacca Builders, we specialize in creating high-quality, affordable homes for families. Our latest project in Ajax features spacious 12-bedroom and 3-bedroom townhomes designed for the entry-level market, combining comfort, style, and functionality.</p>
+    </div>
+  </section>
+  
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Residential Construction</li>
+        <li>Commercial Development</li>
+        <li>Custom Design Projects</li>
+        <li>Renovation and Remodeling</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section id="brochure" class="section">
+    <div class="container">
+      <h2>Our Brochure</h2>
+      <p>Download our project brochure for detailed information:</p>
+      <a href="file_assets/52_kingston_brochure PDF Paid Dec 15.pdf" download class="download-btn">Download Brochure</a>
+    </div>
+  </section>
+  
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/{your-form-id}" method="post" id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <p>Email: <a href="mailto:info@madinacca.com">info@madinacca.com</a></p>
+      <p>Phone: +1 (123) 456-7890</p>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Madinacca Builders. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Highlight the active navigation link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Simple form validation
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(event) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      
+      if (!name || !email || !message) {
+        event.preventDefault();
+        alert('Please fill out all fields.');
+      } else if (!emailRegex.test(email)) {
+        event.preventDefault();
+        alert('Please enter a valid email address.');
+      }
+    });
+  </script>
+</body>
+</html>
