@@ -18,46 +18,45 @@ body {
   padding: 0 20px;
 }
 
-/* Header */
+/* Header Styles */
 header {
-  background-color: #B8860B;
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: linear-gradient(to right, #FFD700, #B8860B); /* Gold gradient */
+    padding: 15px 0;
+    text-align: center;
 }
 
-header .logo {
-  height: 60px;
-  object-fit: contain;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
-header nav {
-  flex-grow: 1;
-  text-align: center;
+header img.logo {
+    height: 80px; /* Adjusted logo height */
+    max-height: 100px;
+    max-width: 100%;
+    object-fit: contain; /* Maintain proportional scaling */
 }
 
 header nav ul {
-  display: flex;
-  justify-content: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between navigation items */
 }
 
-header nav ul li {
-  margin: 0 15px;
+header nav a {
+    text-decoration: none;
+    color: #4A4A4A; /* Dark gray color for links */
+    font-weight: 600;
+    font-size: 1rem; /* Readable font size */
+    transition: color 0.3s ease;
 }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: 600;
+header nav a:hover {
+    color: #8B4513; /* Bronze hover effect */
 }
-
-header nav ul li a:hover {
-  color: #B8860B;
-}
-
 /* Hero Section */
 .hero {
   background-image: url('images/hero-bg.jpg');
