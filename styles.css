@@ -8,9 +8,13 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background-color: #FFF5E5; /* Light beige background */
+  background-image: url('path_to_your_image.jpg'); /* Set the image as the background */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Ensure it's centered */
+  background-attachment: fixed; /* Keep the background fixed during scrolling */
 }
 
+/* Container */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -20,64 +24,65 @@ body {
 
 /* Header Styles */
 header {
-  background: linear-gradient(to right, #FFD700, #B8860B); /* Gold gradient */
-  padding: 15px 0;
-  text-align: center;
+    background: linear-gradient(to right, #FFD700, #B8860B); /* Gold gradient */
+    padding: 15px 0;
+    text-align: center;
+    position: relative; /* To ensure text is visible on the background */
 }
 
 header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 header img.logo {
-  height: 80px; /* Adjusted logo height */
-  max-height: 100px;
-  max-width: 100%;
-  object-fit: contain; /* Maintain proportional scaling */
+    height: 80px; /* Adjusted logo height */
+    max-height: 100px;
+    max-width: 100%;
+    object-fit: contain; /* Maintain proportional scaling */
 }
 
 header nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Spacing between navigation items */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between navigation items */
 }
 
 header nav a {
-  text-decoration: none;
-  color: #4A4A4A; /* Dark gray color for links */
-  font-weight: 600;
-  font-size: 1rem; /* Readable font size */
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: #4A4A4A; /* Dark gray color for links */
+    font-weight: 600;
+    font-size: 1rem; /* Readable font size */
+    transition: color 0.3s ease;
 }
 
 header nav a:hover {
-  color: #8B4513; /* Bronze hover effect */
+    color: #8B4513; /* Bronze hover effect */
 }
 
 /* Hero Section */
 .hero {
-  background-image: url('images/hero-bg.jpg');
+  background-image: url('images/hero-bg.jpg'); /* Hero image */
   background-size: cover;
   background-position: center;
   color: white;
   padding: 100px 20px;
   text-align: center;
-  position: relative;
+  position: relative; /* To make sure the text appears on top of the background */
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
-  z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    z-index: -1; /* To place the overlay behind the text */
 }
 
 .hero h1 {
@@ -103,11 +108,13 @@ header nav a:hover {
 .section {
   padding: 50px 20px;
   margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background to ensure text readability */
+  border-radius: 8px; /* Slight rounding for the sections */
 }
 
 h2, h3 {
   font-size: 2rem;
-  color: #B8860B; /* Gold color */
+  color: #B8860B;
   margin-top: 30px;
   margin-bottom: 15px;
   text-align: center;
@@ -124,8 +131,8 @@ ul {
 
 ul li {
   padding: 10px;
-  background-color: #FFF5E5; /* Light beige background */
-  border-left: 5px solid #B8860B; /* Gold border */
+  background-color: #FFF5E5;
+  border-left: 5px solid #B8860B;
   margin-bottom: 15px;
   border-radius: 6px;
 }
@@ -139,119 +146,11 @@ p {
   line-height: 1.8;
 }
 
-/* Team Section */
-.team-member {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.team-photo {
-  flex: 1;
-  padding: 10px;
-}
-
-.team-photo img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.team-info {
-  flex: 2;
-  padding: 10px;
-}
-
-.team-info h3 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.team-info ul li {
-  margin-bottom: 10px;
-}
-
-.team-info p {
-  line-height: 1.6;
-}
-
-.team-member .team-photo, .team-member .team-info {
-  margin-bottom: 15px;
-}
-
-/* Projects Section */
-.projects-section ul li {
-  padding: 15px;
-  background-color: #FFF5E5;
-  border-left: 5px solid #B8860B;
-  margin-bottom: 20px;
-}
-
-.projects-section h2, .projects-section h3 {
-  text-align: center;
-}
-
-.download-btn {
-  display: inline-block;
-  background-color: #B8860B;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-  margin: 20px auto;
-  text-align: center;
-}
-
-.download-btn:hover {
-  background-color: #FFD700; /* Bronze hover effect */
-}
-
-/* Contact Section */
-#contact ul li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.contact-info li a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-info li a:hover {
-  color: #B8860B; /* Gold hover effect */
-}
-
-.contact-info {
-  margin-bottom: 20px;
-}
-
-.social-links {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.social-links ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-links li a {
-  display: inline-block;
-}
-
-.social-icon {
-  width: 30px;
-  height: 30px;
-}
-
-.contact-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+/* Footer Styles */
+footer {
+    background: #FFFFFF; /* White footer */
+    color: #4A4A4A; /* Dark gray text */
+    padding: 15px 0; /* Adjusted padding */
+    text-align: center;
+    border-top: 1px solid #DDD; /* Light gray border */
 }
