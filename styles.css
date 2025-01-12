@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.8;
-  color: #333;
+  color: #4B4B4B; /* Darker gray for text */
 }
 
 .container {
@@ -24,7 +24,7 @@ header {
 }
 
 header .logo {
-  max-height: 120px;
+  max-height: 100px;
   object-fit: contain;
 }
 
@@ -47,75 +47,31 @@ header nav ul li a:hover {
   color: #B8860B;
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  background-image: url('images/hero-banner.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 100px 20px;
-  filter: brightness(85%); /* Lower image brightness */
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-  z-index: 1;
-}
-
-.hero h1, .hero p, .hero ul {
-  position: relative;
-  z-index: 2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add subtle text shadow */
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #333; /* Slightly off-white text */
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-/* Section Styles */
+/* Section Styling */
 .section {
+  background-color: #FFFFFF; /* White background */
   padding: 60px 20px;
+  color: #4B4B4B; /* Darker gray for content */
 }
 
-.section:nth-child(even) {
-  background-color: #FFF5E5;
-}
-
-/* Typography */
-h2, h3 {
-  color: #B8860B;
+.section h2, .section h3 {
+  color: #B8860B; /* Gold for headings */
   margin-bottom: 20px;
 }
 
-p {
-  margin-bottom: 20px;
+.section p, .section ul {
   font-size: 1rem;
 }
 
-/* Lists */
-ul {
+.section ul {
   padding: 0;
   list-style: none;
 }
 
-ul li {
+.section ul li {
   margin-bottom: 15px;
   padding-left: 10px;
-  border-left: 4px solid #B8860B;
+  border-left: 4px solid #B8860B; /* Gold left border for list items */
 }
 
 /* Button Styling */
@@ -133,7 +89,7 @@ ul li {
   background-color: #8B6914;
 }
 
-/* Team Section */
+/* Meet Our Team - Team Member Styling */
 .team-member {
   display: flex;
   align-items: center;
@@ -153,6 +109,7 @@ ul li {
 }
 
 .team-info h3 {
+  color: #B8860B; /* Gold for names */
   margin-bottom: 10px;
 }
 
@@ -199,14 +156,6 @@ ul li {
   nav ul {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
   }
 
   .team-member {
