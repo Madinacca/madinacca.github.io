@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul, li, a, div, section, footer, header {
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #FFFFFF; /* White background */
+    background: #FFF5E5; /* Light beige background */
     color: #5A5A5A; /* Subtle dark gray for readability */
     line-height: 1.8; /* Improved line spacing */
 }
@@ -43,7 +43,7 @@ header nav ul {
 
 header nav a {
     text-decoration: none;
-    color: #4A4A4A; /* Dark gray navigation links */
+    background: #FFFFFF; /* White background */
     font-weight: 600;
     font-size: 1rem; /* Adjusted font size for readability */
     transition: color 0.3s ease;
@@ -61,7 +61,7 @@ header nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: #FFFFFF; /* White background */
+    background: #FFF5E5; /* Light beige background */
     color: #B8860B; /* Gold for headings */
     padding: 70px 20px;
     text-align: center;
