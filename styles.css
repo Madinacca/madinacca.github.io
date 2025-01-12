@@ -17,15 +17,10 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Ensure space between nav and logo */
   padding: 20px 0;
   background-color: #FFF5E5;
   border-bottom: 2px solid #B8860B;
-}
-
-header .logo {
-  max-height: 100px;
-  object-fit: contain;
 }
 
 header nav ul {
@@ -47,28 +42,97 @@ header nav ul li a:hover {
   color: #B8860B;
 }
 
-/* Section Styling */
-.section {
-  background-color: #FFFFFF; /* White background */
-  padding: 60px 20px;
-  color: #4B4B4B; /* Darker gray for content */
+header .logo {
+  margin-left: auto; /* Push the logo to the extreme right */
+  max-height: 100px;
+  object-fit: contain;
 }
 
-.section h2, .section h3 {
+/* Hero Section */
+.hero {
+  position: relative;
+  background-image: url('images/hero-banner.jpg'); /* Path to the hero background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFFFFF; /* Ensure text stands out */
+  padding: 100px 20px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay for readability */
+  z-index: 1;
+}
+
+.hero h1, .hero p {
+  position: relative;
+  z-index: 2; /* Ensure text is above the overlay */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add subtle shadow for text clarity */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* About Us Section */
+#about {
+  background-image: url('images/about-us-bg.jpg'); /* Background for About Us */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  color: #4B4B4B;
+}
+
+#about h2, #about h3 {
   color: #B8860B; /* Gold for headings */
   margin-bottom: 20px;
 }
 
-.section p, .section ul {
+#about p, #about ul {
   font-size: 1rem;
 }
 
-.section ul {
-  padding: 0;
-  list-style: none;
+/* Services Section */
+#services .residential-development {
+  background-image: url('images/residential-development.jpg'); /* Image for Residential Development */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
 }
 
-.section ul li {
+#services .commercial-development {
+  background-image: url('images/commercial-development.jpg'); /* Image for Commercial Development */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+#services .renovation-services {
+  background-image: url('images/renovation-services.jpg'); /* Image for Renovation Services */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+#services ul {
+  list-style: none;
+  padding: 0;
+}
+
+#services ul li {
   margin-bottom: 15px;
   padding-left: 10px;
   border-left: 4px solid #B8860B; /* Gold left border for list items */
@@ -156,6 +220,14 @@ header nav ul li a:hover {
   nav ul {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 
   .team-member {
