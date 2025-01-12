@@ -1,413 +1,170 @@
-/* /* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, div, section, footer, header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Global Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF; /* White background */
+    color: #5A5A5A; /* Subtle dark gray for readability */
+    line-height: 1.8; /* Improved line spacing */
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Header */
+/* Header Styles */
 header {
-  background-color: #333;
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background: linear-gradient(to right, #FFD700, #B8860B); /* Gold gradient */
+    padding: 15px 0; /* Reduced padding for better alignment */
+    text-align: center;
 }
 
-header .logo {
-  height: 60px;
-  object-fit: contain;
+header .container {
+    display: flex;
+    justify-content: space-between; /* Align nav links to the right */
+    align-items: center;
+    padding: 0 20px; /* Adjust padding for spacing */
 }
 
-header nav {
-  flex-grow: 1;
-  text-align: center;
+header img.logo {
+    height: 100px; /* Increase logo size */
+    max-height: 120px; /* Ensure it doesn't exceed a specific height */
+    max-width: 100%; /* Ensure proportional scaling */
+    margin-right: auto; /* Align logo to the extreme left */
+    object-fit: contain; /* Maintain aspect ratio */
 }
 
 header nav ul {
-  display: flex;
-  justify-content: center;
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between navigation items */
 }
 
-header nav ul li {
-  margin: 0 15px;
+header nav a {
+    text-decoration: none;
+    color: #4A4A4A; /* Dark gray navigation links */
+    font-weight: 600;
+    font-size: 1rem; /* Adjusted font size for readability */
+    transition: color 0.3s ease;
 }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: 600;
+header nav a:hover {
+    color: #8B4513; /* Bronze hover effect */
 }
 
-header nav ul li a:hover {
-  color: #B8860B;
+/* Section Styling */
+.section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
 /* Hero Section */
 .hero {
-  background-image: url('images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
+    background: #FFFFFF; /* White background */
+    color: #B8860B; /* Gold for headings */
+    padding: 70px 20px;
+    text-align: center;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-top: 20px;
-}
-
-.hero ul {
-  list-style-type: none;
-  margin-top: 20px;
-}
-
-.hero ul li {
-  margin: 10px 0;
-}
-
-/* Section Styles */
-.section {
-  padding: 50px 20px;
-  margin-bottom: 40px;
-}
-
-h2, h3 {
-  font-size: 2rem;
-  color: #B8860B;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-ul {
-  list-style-type: none;
-  margin: 20px 0;
-}
-
-ul li {
-  padding: 10px;
-  background-color: #FFF5E5;
-  border-left: 5px solid #B8860B;
-  margin-bottom: 15px;
-  border-radius: 6px;
-}
-
-ul li strong {
-  font-weight: 700;
-}
-
-p {
-  margin-bottom: 20px;
-  line-height: 1.8;
-}
-
-/* Team Section */
-.team-member {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.team-photo {
-  flex: 1;
-  padding: 10px;
-}
-
-.team-photo img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.team-info {
-  flex: 2;
-  padding: 10px;
-}
-
-.team-info h3 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.team-info ul li {
-  margin-bottom: 10px;
-}
-
-.team-info p {
-  line-height: 1.6;
-}
-
-.team-member .team-photo, .team-member .team-info {
-  margin-bottom: 15px;
-}
-
-/* Projects Section */
-.projects-section ul li {
-  padding: 15px;
-  background-color: #FFF5E5;
-  border-left: 5px solid #B8860B;
-  margin-bottom: 20px;
-}
-
-.projects-section h2, .projects-section h3 {
-  text-align: center;
-}
-
-.download-btn {
-  display: inline-block;
-  background-color: #B8860B;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-  margin: 20px auto;
-  text-align: center;
-}
-
-.download-btn:hover {
-  background-color: #FFD700;
-}
-
-/* Contact Section */
-#contact ul li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.contact-info li a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-info li a:hover {
-  color: #B8860B;
-}
-
-.contact-info {
-  margin-bottom: 20px;
-}
-
-.social-links {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.social-links ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-links li a {
-  display: inline-block;
-}
-
-.social-icon {
-  width: 30px;
-  height: 30px;
-}
-
-.contact-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-/* General Section Styles */
-.section {
-    padding: 50px 20px;
-    margin: auto;
-    max-width: 1200px;
-    text-align: left;
-    line-height: 1.8; /* Better readability */
-    background-color: #f9f9f9; /* Alternate section background */
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-}
-
-/* Header */
-header {
-    background-color: #2d2d2d; /* Dark background for header */
-    height: 80px; /* Adjust the height for better spacing */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px; /* Spacing around content */
-}
-
-header .logo {
-    max-height: 60px; /* Make sure the logo fits well */
-    object-fit: contain; /* Avoid logo stretching */
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin-right: 20px; /* Space between nav links */
-}
-
-nav ul li:last-child {
-    margin-right: 0; /* Remove margin from the last item */
-}
-
-nav ul li a {
-    color: #f7f7f7;
-    text-decoration: none;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-/* Home Section */
-#home {
-    background: url('path_to_your_background_image.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-#home h1 {
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 3rem; /* Larger title size */
     margin-bottom: 30px;
-    text-transform: uppercase;
+    color: #B8860B; /* Gold color */
 }
 
-#home h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-#home p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.hero p {
+    font-size: 1.3rem; /* Slightly larger paragraph text */
+    margin-bottom: 25px;
+    color: #5A5A5A; /* Subtle gray */
 }
 
 /* Section Headings */
-h2, h3, h4 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-weight: bold;
+.section h1, .section h2, .section h3 {
+    color: #B8860B; /* Gold color for headings */
+    margin-bottom: 30px; /* Increased spacing after headings */
 }
 
-/* List Items */
-ul li {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #FFF5E5;
-    border-left: 5px solid #B8860B; /* Gold border */
-    border-radius: 6px;
-    font-size: 1.1rem;
-    color: #5A5A5A;
+/* Mentor Boxes */
+.section ul li {
+    margin: 20px auto;
+    padding: 20px;
+    background: #FFF5E5; /* Light beige background */
+    border-left: 5px solid #B8860B; /* Gold border accent */
+    border-radius: 8px;
+    color: #4A4A4A; /* Dark gray text */
+    max-width: 800px;
+    text-align: left;
+}
+
+/* Paragraph Text Styling */
+.section p {
+    color: #5A5A5A; /* Subtle dark gray for paragraph text */
+    max-width: 900px; /* Expanded width for readability */
+    margin: auto;
+    line-height: 1.8; /* Improved paragraph line spacing */
+}
+
+/* Footer Styles */
+footer {
+    background: #FFFFFF; /* White footer */
+    color: #4A4A4A; /* Dark gray text */
+    padding: 15px 0; /* Adjusted padding */
+    text-align: center;
+    border-top: 1px solid #DDD; /* Light gray border */
 }
 
 /* Buttons */
-button, a.download-btn {
-    display: inline-block;
-    background: #B8860B;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    border-radius: 5px;
+a.download-btn, button.btn {
+    background: #FFD700; /* Gold background */
+    color: #FFFFFF; /* White text */
+    padding: 12px 25px; /* Increased padding for better size */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1rem; /* Adjusted font size */
+    border-radius: 5px;
     transition: background 0.3s ease;
 }
 
-button:hover, a.download-btn:hover {
-    background: #FFD700;
+a.download-btn:hover, button.btn:hover {
+    background: #B8860B; /* Bronze hover */
 }
 
-/* Team Section */
-.team-member {
-    display: flex;
-    margin-bottom: 40px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
 
-.team-photo {
-    flex: 1;
-    margin-right: 30px;
-}
+    header nav ul {
+        flex-direction: column; /* Navigation items in a column */
+        gap: 10px;
+    }
 
-.team-info {
-    flex: 2;
-}
+    header img.logo {
+        max-height: 70px; /* Smaller logo for mobile */
+    }
 
-/* Contact Section */
-.contact-info li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
+    .section p {
+        padding: 0 15px; /* Adjusts padding for readability */
+    }
 
-.contact-info li a {
-    color: #B8860B;
-    text-decoration: none;
-}
+    .section {
+        padding: 40px 20px; /* Slightly reduced padding for smaller screens */
+    }
 
-.contact-info li a img {
-    margin-right: 10px;
-    max-width: 20px;
-    max-height: 20px;
-}
+    .section h1, .section h2, .section h3 {
+        font-size: 2rem; /* Smaller heading sizes for mobile */
+    }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
+    .team-member {
+        flex-direction: column; /* Stack team member sections on smaller screens */
+    }
 
-.social-links ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-}
-
-.social-links ul li {
-    margin: 0 15px;
-}
-
-.social-icon {
-    width: 25px;
-    height: 25px;
+    .team-photo img {
+        width: 100%; /* Allow team photos to resize on mobile */
+        max-width: 200px; /* Limit max size for images */
+        height: auto;
+    }
 }
