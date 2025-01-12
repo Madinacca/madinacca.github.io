@@ -55,7 +55,7 @@ header nav ul li a:hover {
   background-position: center;
   color: #fff;
   padding: 100px 20px;
-  filter: brightness(70%); /* Lower image brightness */
+  filter: brightness(50%); /* Lower image brightness */
 }
 
 .hero::before {
