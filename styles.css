@@ -40,13 +40,13 @@ header nav ul {
 
 header nav a {
     text-decoration: none;
-    color: #FFD700; /* Gold hover effect */
+    color: #FFD700; /* Gold text */
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 header nav a:hover {
-    color: #FFA500; /* Bronze hover color */
+    color: #FFA500; /* Bronze hover effect */
 }
 
 /* Section Styling */
@@ -59,7 +59,7 @@ header nav a:hover {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #0E1A2B, #1A2E46); /* Dark blue gradient */
-    color: #FFD700; /* Gold heading */
+    color: #FFD700; /* Gold headings */
     padding: 80px 20px;
     text-align: center;
 }
@@ -77,9 +77,9 @@ header nav a:hover {
 }
 
 /* Section Headings */
-.section h2, .section h3 {
+.section h1, .section h2, .section h3 {
+    color: #FFD700; /* Gold color for all headings */
     margin-bottom: 20px;
-    color: #FFD700; /* Gold heading text */
 }
 
 /* List Styles */
@@ -108,7 +108,7 @@ form {
     background: #1A2E46; /* Dark background */
     padding: 20px;
     border-radius: 8px;
-    color: #FFD700;
+    color: #FFD700; /* Gold text for labels */
 }
 
 form label {
