@@ -49,22 +49,41 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  text-align: center;
+  position: relative;
   background-image: url('images/hero-banner.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
   padding: 100px 20px;
+  filter: brightness(70%); /* Lower image brightness */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+.hero h1, .hero p, .hero ul {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add subtle text shadow */
 }
 
 .hero h1 {
   font-size: 3rem;
-  color: #FFF5E5;
+  margin-bottom: 20px;
+  color: #FFF5E5; /* Slightly off-white text */
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 /* Section Styles */
