@@ -17,15 +17,10 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Align navigation and logo */
   padding: 20px 0;
   background-color: #FFF5E5;
   border-bottom: 2px solid #B8860B;
-}
-
-header .logo {
-  max-height: 100px;
-  object-fit: contain;
 }
 
 header nav ul {
@@ -47,15 +42,21 @@ header nav ul li a:hover {
   color: #B8860B;
 }
 
+header .logo {
+  margin-left: auto; /* Push logo to the extreme right */
+  max-height: 100px;
+  object-fit: contain;
+}
+
 /* Hero Section */
 .hero {
   position: relative;
   background-image: url('images/hero-banner.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  background-repeat: no-repeat;
   padding: 100px 20px;
-  filter: brightness(70%); /* Lower image brightness */
+  filter: brightness(70%); /* Lower background brightness */
 }
 
 .hero::before {
@@ -65,20 +66,20 @@ header nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for contrast */
   z-index: 1;
 }
 
 .hero h1, .hero p, .hero ul {
   position: relative;
   z-index: 2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add subtle text shadow */
+  color: #FFFFFF; /* Extremely bright text */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8); /* Stronger text shadow for better readability */
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #FFF5E5; /* Slightly off-white text */
 }
 
 .hero p {
@@ -133,7 +134,7 @@ ul li {
   background-color: #8B6914;
 }
 
-/* Team Section */
+/* Meet Our Team - Team Member Styling */
 .team-member {
   display: flex;
   align-items: center;
