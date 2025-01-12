@@ -28,7 +28,9 @@ header .container {
 }
 
 header img.logo {
-    height: 50px;
+    width: 100%; /* Adjusts logo width to span full container */
+    max-height: 80px; /* Maintains proportional height */
+    object-fit: contain; /* Ensures the logo fits without distortion */
 }
 
 header nav ul {
@@ -92,7 +94,7 @@ header nav a:hover {
     text-align: left;
 }
 
-/* Our Promise Text Styling */
+/* Paragraph Text Styling */
 .section p {
     color: #5A5A5A; /* Subtle dark gray for paragraph text */
     max-width: 800px;
@@ -127,10 +129,19 @@ a.download-btn:hover, button.btn:hover {
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
+        text-align: center;
     }
 
     header nav ul {
         flex-direction: column;
         gap: 10px;
+    }
+
+    header img.logo {
+        max-height: 60px; /* Smaller logo for mobile */
+    }
+
+    .section p {
+        padding: 0 15px; /* Adjusts padding for readability */
     }
 }
