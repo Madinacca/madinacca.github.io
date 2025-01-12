@@ -22,15 +22,17 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Align nav links to the right */
     align-items: center;
-    padding: 0 20px;
+    padding: 0 20px; /* Adjust padding for spacing */
 }
 
 header img.logo {
-    width: 100%; /* Adjusts logo width to span full container */
-    max-height: 80px; /* Maintains proportional height */
-    object-fit: contain; /* Ensures the logo fits without distortion */
+    height: 100px; /* Increase the height of the logo */
+    max-height: 120px; /* Ensure it doesn't exceed a specific height */
+    max-width: 100%; /* Ensure the logo scales proportionally */
+    margin-right: auto; /* Push the logo to the extreme left */
+    object-fit: contain; /* Ensure it maintains its aspect ratio */
 }
 
 header nav ul {
