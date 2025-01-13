@@ -232,7 +232,7 @@ ul li {
   }
 
   header nav {
-    flex-grow: none;
+    flex-grow: 0;
     align-self: flex-end;
   }
 
