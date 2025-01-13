@@ -15,6 +15,16 @@ body {
   z-index: 10;
 }
 
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+
 /* Header */
 header {
   display: flex;
@@ -25,12 +35,19 @@ header {
   border-bottom: 2px solid #B8860B;
 }
 
+header nav {
+  flex-grow: 2;
+  align-self: flex-end;
+}
+
 header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   gap: 20px;
+  justify-self: flex-end;
+  padding-right: 16px;
 }
 
 header nav ul li a {
@@ -45,8 +62,8 @@ header nav ul li a:hover {
 }
 
 header .logo {
-  margin-left: auto; /* Push logo to the extreme right */
-  max-height: 100px;
+  margin: 0;
+  max-height: 185px;
   object-fit: contain;
 }
 
@@ -211,8 +228,12 @@ ul li {
   }
 
   header .logo {
-    max-height: 70px;
-    margin-bottom: 20px;
+    max-height: 250px;
+  }
+
+  header nav {
+    flex-grow: none;
+    align-self: flex-end;
   }
 
   nav ul {
